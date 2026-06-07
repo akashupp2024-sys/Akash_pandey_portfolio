@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Akash Pandey Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,sans-serif;
+background:#050816;color:#fff;overflow-x:hidden
+}
+canvas{position:fixed;inset:0;z-index:-1}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,#4f8cff,#9b4dff);z-index:1000}
+nav{
+position:sticky;top:0;z-index:999;
+backdrop-filter:blur(10px);
+background:rgba(0,0,0,.2);
+border:1px solid rgba(255,255,255,.08);
+padding:16px 8%;
+display:flex;justify-content:space-between;align-items:center
+}
+nav h2{
+background:linear-gradient(90deg,#4f8cff,#9b4dff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent
+}
+nav ul{display:flex;list-style:none;gap:20px;flex-wrap:wrap}
+nav a{text-decoration:none;color:#fff}
+section{padding:80px 8%}
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+gap:60px;
+flex-wrap:wrap
+}
+.photo{
+width:320px;height:320px;border-radius:50%;
+border:6px solid #8b5cf6;
+overflow:hidden;
+box-shadow:0 0 35px rgba(139,92,246,.6)
+}
+.photo img{width:100%;height:100%;object-fit:cover}
+.hero-content{max-width:700px}
+h1{
+font-size:clamp(2.7rem,6vw,5rem);
+font-weight:bold
+}
+.gradient{
+background:linear-gradient(90deg,#4f8cff,#9b4dff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent
+}
+.role{
+font-size:2rem;
+margin-top:15px;
+font-family:monospace
+}
+.desc{
+margin:25px 0;
+font-size:1.1rem;
+line-height:1.8;
+color:#cbd5e1
+}
+.highlight{
+border:1px solid rgba(155,77,255,.5);
+padding:20px;
+border-radius:18px;
+background:rgba(20,20,40,.5);
+margin-bottom:30px
+}
+.btns{display:flex;gap:20px;flex-wrap:wrap}
+.btn{
+padding:14px 24px;
+border-radius:12px;
+text-decoration:none;
+color:#fff;
+border:1px solid rgba(255,255,255,.15);
+background:linear-gradient(90deg,#4f8cff,#9b4dff)
+}
+.card{
+background:rgba(10,15,40,.65);
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+padding:30px;
+margin-top:25px
+}
+h2{font-size:2rem;margin-bottom:20px}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px
+}
+.project:hover{
+transform:translateY(-10px);
+transition:.3s
+}
+.bar{
+height:10px;background:#1e293b;border-radius:20px;margin-top:8px
+}
+.fill{
+height:100%;
+background:linear-gradient(90deg,#4f8cff,#9b4dff);
+border-radius:20px;width:75%
+}
+.fade{opacity:0;transform:translateY(40px);transition:.8s}
+.fade.show{opacity:1;transform:none}
+footer{text-align:center;padding:40px;color:#aaa}
+@media(max-width:900px){
+.hero{justify-content:center;text-align:center}
+.photo{width:250px;height:250px}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<canvas id="bg"></canvas>
+
+<nav>
+<h2>AKASH PANDEY</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#activities">Activities</a></li><li><a href="https://github.com/akashupp2024-sys" target="_blank">GitHub</a></li>
+</ul>
+</nav>
+
+<section class="hero fade">
+<div class="photo">
+<img src="image.png" alt="Akash">
+</div>
+
+<div class="hero-content">
+<h1>AKASH <span class="gradient">PANDEY</span></h1>
+<div class="role" id="typing"></div>
+
+<p class="desc">
+Computer Science (AI) undergraduate with strong fundamentals in programming and problem-solving. Seeking internship opportunities to apply analytical skills, contribute to innovative projects, and gain hands-on industry experience.
+</p>
+
+<div class="highlight">
+🏆 Participant – Smart India Hackathon 2025 (National Level)
+</div>
+
+<div class="btns">
+<a class="btn" href="Akash_Pandey_Resume_Updated.pdf" download>Download Resume</a>
+<a class="btn" href="https://github.com/akashupp2024-sys" target="_blank">GitHub Profile</a>
+</div>
+</div>
+</section>
+
+<section id="about" class="fade">
+<h2 class="gradient">Career Objective</h2>
+<div class="card">
+Computer Science (AI) undergraduate with strong fundamentals in programming and problem-solving. Seeking internship opportunities to apply analytical skills, contribute to innovative projects, and gain hands-on industry experience.
+</div>
+</section>
+
+<section id="education" class="fade">
+<h2 class="gradient">Education</h2>
+<div class="grid">
+<div class="card">
+<h3>B.Tech – Computer Science Engineering (Artificial Intelligence)</h3>
+<p>GL Bajaj Institute of Technology and Management (2024 – Present)</p>
+</div>
+<div class="card">
+<h3>Class XII (CBSE)</h3>
+<p>70.5%, Central Academy</p>
+</div>
+<div class="card">
+<h3>Class X (CBSE)</h3>
+<p>76.8%, Central Academy</p>
+</div>
+</div>
+</section>
+
+<section id="skills" class="fade">
+<h2 class="gradient">Technical Skills</h2>
+<div class="card">
+<p>Programming: C++, Python, C</p>
+<div class="bar"><div class="fill"></div></div><br>
+
+<p>Core Subjects: Data Structures, Operating Systems (Basic), DBMS (Basic)</p>
+<div class="bar"><div class="fill"></div></div><br>
+
+<p>Concepts: Object-Oriented Programming (OOP), Problem Solving</p>
+<div class="bar"><div class="fill"></div></div><br>
+
+<p>Tools: VS Code, Git (Basic)</p>
+<div class="bar"><div class="fill"></div></div>
+</div>
+</section>
+
+<section id="projects" class="fade">
+<h2 class="gradient">Projects</h2>
+<div class="grid">
+<div class="card project">
+<h3>Desktop AI Assistant (C++)</h3>
+<ul>
+<li>Built an AI-based desktop assistant to open applications and websites using voice/text commands.</li>
+<li>Implemented string processing and conditional logic for command recognition.</li>
+<li>Integrated system-level calls for seamless OS interaction.</li>
+</ul>
+</div>
+
+<div class="card project">
+<h3>Smart Expense Tracker System (C++)</h3>
+<ul>
+<li>Developed a console-based system to record and categorize financial transactions.</li>
+<li>Implemented file handling for persistent data storage.</li>
+<li>Used OOP principles and STL containers for dynamic data management and summary reports.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="activities" class="fade">
+<h2 class="gradient">Achievements & Activities</h2>
+<div class="grid">
+<div class="card">
+<h3>Hackathon Participation</h3>
+<p>Participant – Smart India Hackathon 2025 (National Level)</p>
+</div>
+<div class="card">
+<h3>Extracurricular Activities</h3>
+<p>Volunteer – NCQC 2025 (College Level): Assisted in coordination, logistics, and event execution.</p>
+</div>
+<div class="card">
+<h3>Hobbies</h3>
+<p>Photography | Playing Table Tennis</p>
+</div>
+</div>
+</section>
+
+<footer>© Akash Pandey Portfolio</footer>
+
+<script>
+const roles=[
+"Computer Science (AI) Undergraduate",
+"C++ Developer",
+"Problem Solving Enthusiast"
+];
+let i=0,j=0,del=false;
+function type(){
+const el=document.getElementById("typing");
+let txt=roles[i];
+el.innerText=txt.slice(0,j);
+if(!del){
+j++;
+if(j>txt.length){del=true;setTimeout(type,1000);return;}
+}else{
+j--;
+if(j==0){del=false;i=(i+1)%roles.length;}
+}
+setTimeout(type,del?50:100);
+}
+type();
+
+window.addEventListener('scroll',()=>{
+const h=document.documentElement;
+const sc=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+document.getElementById('progress').style.width=sc+'%';
+});
+
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting)e.target.classList.add('show')
+})
+});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+
+const c=document.getElementById('bg');
+const ctx=c.getContext('2d');
+function resize(){c.width=innerWidth;c.height=innerHeight}
+resize();
+addEventListener('resize',resize);
+
+const dots=[...Array(80)].map(()=>({
+x:Math.random()*c.width,
+y:Math.random()*c.height,
+vx:(Math.random()-.5)*0.5,
+vy:(Math.random()-.5)*0.5
+}));
+
+function animate(){
+ctx.clearRect(0,0,c.width,c.height);
+dots.forEach(p=>{
+p.x+=p.vx;p.y+=p.vy;
+if(p.x<0||p.x>c.width)p.vx*=-1;
+if(p.y<0||p.y>c.height)p.vy*=-1;
+ctx.beginPath();
+ctx.arc(p.x,p.y,2,0,6.28);
+ctx.fillStyle='#6f7cff';
+ctx.fill();
+});
+for(let i=0;i<dots.length;i++){
+for(let j=i+1;j<dots.length;j++){
+let dx=dots[i].x-dots[j].x;
+let dy=dots[i].y-dots[j].y;
+let d=Math.sqrt(dx*dx+dy*dy);
+if(d<120){
+ctx.strokeStyle='rgba(155,77,255,'+(1-d/120)*0.2+')';
+ctx.beginPath();
+ctx.moveTo(dots[i].x,dots[i].y);
+ctx.lineTo(dots[j].x,dots[j].y);
+ctx.stroke();
+}
+}
+}
+requestAnimationFrame(animate);
+}
+animate();
+</script>
+</body>
+</html>
